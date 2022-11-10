@@ -1,0 +1,70 @@
+{
+  "ble": {
+    "button_title": "Wi-Fi Setup",
+    "title" : "BLE Setting",
+    "loading": "Devices are searched. Found devices will shown here...",
+    "card_navigation": "Tap to configure wireless network",
+    "tap_unencrypted_network": "Unencrypted network: Tap",
+    "connect": "Connect",
+    "procced_question": "if you want to proceed",
+    "wifi_list": "WiFi List",
+    "password_dialog": "Enter the password",
+    "password_dialog_hint": "Password",
+    "password_dialog_connect": "Connect",
+    "password_dialog_cancel": "Cancel",
+    "action_on": "Please turn Bluetooth on",
+    "errors": {
+      "title": "Error!",
+      "password": "Wrong password",
+      "network": "Network not found",
+      "json": "Please try again",
+      "off": "Bluetooth is off"
+    }
+  },
+  "app_info": {
+    "version": "The version of this app is",
+    "licenses": "Licenses"
+  },
+  "ble_control": {
+    "button_title": "BLE Control",
+    "card_navigation": "Tap to control the device via BLE",
+    "input_button": "Input",
+    "info_button": "Info",
+    "info_dialog_title": "Connection Status",
+    "info_dialog_message": "If the device is connected to the network, FULL functions are available. If not, only LIMITED functions are available.",
+    "connection_limited": "Function: LIMITED",
+    "connection_full": "Function: FULL "
+  },
+  "softap": {
+    "title": "SoftAP Setting",
+    "description": "BLE connection hasn't worked. Please connect to SoftAP and change device network manually.",
+    "connect": "Connect",
+    "cancle": "Cancel",
+    "soft_ap_list": "SoftAP List"
+  },
+  "multi_room": {
+    "title": "Multi-Room",
+    "loading": "Devices are searched. Found devices will shown here..."
+  },
+  "refresher": {
+    "fail": "Load Failed! Click retry!",
+    "release": "Release to load more"
+  },
+  "dialog": {
+    "alert_dialog_ok": "OK",
+    "alert_dialog_cancel": "Cancel",
+    "add_dialog_title": "Select an option",
+    "add_dialog_ble": "Set up new devices",
+    "add_dialog_multi_room": "Set up new groups",
+    "mr_dialog_title": "Select the devices you want to add",
+    "mr_dialog_connect_button": "Connect",
+    "mr_dialog_ungroup_title": "Ungrouping",
+    "mr_dialog_ungroup_content": "Do you really want to remove the device from the group?"
+  },
+  "load": {
+    "loading": "Loading..."
+  },
+  "wifi": {
+    "wifi_disconnected": "Please connect to WiFi"
+  }
+}

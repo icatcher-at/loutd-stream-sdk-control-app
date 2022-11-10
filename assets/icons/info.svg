@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_68993" data-name="Group 68993" transform="translate(-300 -59)">
+    <g id="Icon_attention_outline" transform="translate(324 83) rotate(180)">
+      <path id="Path" d="M2.394,1.2A1.2,1.2,0,1,1,1.2,0,1.2,1.2,0,0,1,2.394,1.2Z" transform="translate(10.75 16.8)" fill="#b7d64f"/>
+      <path id="Path-2" data-name="Path" d="M1.2,0a1.2,1.2,0,0,1,1.2,1.2V8.4A1.2,1.2,0,1,1,0,8.4V1.2A1.2,1.2,0,0,1,1.2,0Z" transform="translate(10.75 4.8)" fill="#b7d64f"/>
+      <path id="Shape" d="M12,24A12,12,0,1,1,24,12,12.014,12.014,0,0,1,12,24ZM12,2.4A9.6,9.6,0,1,0,21.6,12,9.611,9.611,0,0,0,12,2.4Z" transform="translate(0 0)" fill="#b7d64f"/>
+    </g>
+  </g>
+</svg>

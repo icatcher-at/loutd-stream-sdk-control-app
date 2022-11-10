@@ -1,0 +1,63 @@
+{
+  "ble": {
+    "button_title": "Wi-Fi Setup",
+    "title" : "BLE Einstellung",
+    "loading": "Geräte werden gesucht. Gefundene Geräte werden hier angezeigt...",
+    "card_navigation": "Tippen Sie hier, das Netzwerk zu konfigurieren",
+    "tap_unencrypted_network": "Unverschlüsseltes Netzwerk: Tippen Sie",
+    "connect": "Verbinden",
+    "procced_question": ", wenn Sie fortfahren möchten",
+    "wifi_list": "WiFi Liste",
+    "password_dialog": "Gib das Passwort ein",
+    "password_dialog_hint": "Passwort",
+    "password_dialog_connect": "Verbinden",
+    "password_dialog_cancel": "Absagen",
+    "action_on": "Bitte schalten Sie Bluetooth ein",
+    "errors": {
+      "title": "Fehler!",
+      "password": "Das Passwort ist falsch",
+      "network": "Netzwerk nicht gefunden",
+      "json": "Versuchen Sie noch einmal",
+      "off": "Bluetooth ist ausgeschaltet"
+    }
+  },
+  "app_info": {
+    "version": "Die Version von der App ist",
+    "licenses": "Licenses"
+  },
+  "ble_control": {
+    "button_title": "BLE Control",
+    "card_navigation": "Tippen Sie hier, das Gerät mit BLE zu kontrollieren",
+    "input_button": "Eingabe",
+    "info_button": "Info",
+    "info_dialog_title": "Verbindungsstatus",
+    "info_dialog_message": "Wenn das Gerät mit dem Netzwerk verbunden ist, stehen die VOLLSTÄNDIGen Funktionen zur Verfügung. Andernfalls stehen nur BEGRENZTen Funktionen zur Verfügung.",
+    "connection_limited": "Verbindung: BEGRENZT",
+    "connection_full": "Verbindung: VOLLSTÄNDIG"
+  },
+  "softap": {
+    "title": "SoftAP Einstellung",
+    "description": "BLE-Verbindung hat nicht funktioniert. Bitte verbinden Sie sich mit SoftAP und ändern Sie das Gerätenetzwerk manuell.",
+    "connect": "Verbinden Sie sich mit SoftAP",
+    "cancle": "Verzichten",
+    "soft_ap_list": "SoftAP Liste"
+  },
+  "multi_room": {
+    "title": "Multi-Room",
+    "loading": "Geräte werden gesucht. Gefundene Geräte werden hier angezeigt..."
+  },
+  "dialog": {
+    "alert_dialog_ok": "OK",
+    "alert_dialog_cancel": "Verzichten",
+    "add_dialog_title": "Wählen Sie eine Option",
+    "add_dialog_ble": "Neue Geräten einstellen",
+    "add_dialog_multi_room": "Neue Gruppen einstellen",
+    "mr_dialog_title": "Wählen Sie die Geräte aus, die Sie hinzufügen möchten",
+    "mr_dialog_connect_button": "Verbinden",
+    "mr_dialog_ungroup_title": "Ungrouping",
+    "mr_dialog_ungroup_content": "Möchten Sie das Gerät wirklich aus der Gruppe entfernen?"
+  },
+  "load": {
+    "loading": "Lädt..."
+  }
+}

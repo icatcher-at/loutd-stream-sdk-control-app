@@ -1,0 +1,49 @@
+{
+  "inputs" : [
+    {
+      "name" : "Line In (RCA)",
+      "buttonKey" : 390,
+      "enabled" : true
+    },
+    {
+      "name" : "Line In (XLR)",
+      "buttonKey" : 381,
+      "enabled" : true
+    },
+    {
+      "name" : "Phono In (RCA)",
+      "buttonKey" : 379,
+      "enabled" : false
+    },
+    {
+      "name" : "TV (eARC)",
+      "buttonKey" : 377,
+      "enabled" : true
+    },
+    {
+      "name" : "Airable radio",
+      "buttonKey" : 385,
+      "enabled" : false
+    },
+    {
+      "name" : "Dig In (optical)",
+      "buttonKey" : 389,
+      "enabled" : true
+    },
+    {
+      "name" : "Dig In (RCA)",
+      "buttonKey" : 383,
+      "enabled" : true
+    },
+    {
+      "name" : "Dig In (XLR)",
+      "buttonKey" : 382,
+      "enabled" : true
+    },
+    {
+      "name" : "Bluetooth A2DP",
+      "buttonKey" : 237,
+      "enabled" : false
+    }
+  ]
+}

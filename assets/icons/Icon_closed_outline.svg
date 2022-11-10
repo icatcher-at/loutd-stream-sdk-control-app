@@ -1,0 +1,8 @@
+<svg id="Icon_closed_outline" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20">
+  <g id="Icon_closed_outline-2" data-name="Icon_closed_outline">
+    <path id="Path" d="M2.559,3.24A5.819,5.819,0,0,0,2,6,1,1,0,0,1,0,6,7.758,7.758,0,0,1,.816,2.26,4.256,4.256,0,0,1,2.4.635,5.108,5.108,0,0,1,5,0,5.108,5.108,0,0,1,7.6.635,4.256,4.256,0,0,1,9.184,2.26,7.758,7.758,0,0,1,10,6,1,1,0,1,1,8,6a5.819,5.819,0,0,0-.559-2.76A2.258,2.258,0,0,0,6.6,2.365,3.127,3.127,0,0,0,5,2a3.127,3.127,0,0,0-1.6.365A2.258,2.258,0,0,0,2.559,3.24Z" transform="translate(4)" fill="#fff"/>
+    <path id="Path-2" data-name="Path" d="M4,2A2,2,0,1,1,2,0,2,2,0,0,1,4,2Z" transform="translate(7 10)" fill="#fff"/>
+    <path id="Path-3" data-name="Path" d="M1,0A1,1,0,0,1,2,1V4A1,1,0,0,1,0,4V1A1,1,0,0,1,1,0Z" transform="translate(8 11)" fill="#fff"/>
+    <path id="Shape" d="M15,14H3a3,3,0,0,1-3-3V3A3,3,0,0,1,3,0H15a3,3,0,0,1,3,3v8A3,3,0,0,1,15,14ZM3,2A1,1,0,0,0,2,3v8a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1Z" transform="translate(0 6)" fill="#fff"/>
+  </g>
+</svg>
