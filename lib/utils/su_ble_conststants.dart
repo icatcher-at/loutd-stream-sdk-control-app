@@ -1,5 +1,4 @@
 //Constants used for ble services
-
 const String wifiAmpServiceUuidString = 'E8AAD0EC-B9A2-11EC-8422-0242AC120002';
 const String wifiServiceUuidString = 'CEE499E3-43A8-51D2-E7F4-1626AD235C0F';
 
@@ -17,7 +16,7 @@ const String wifiCharReadOffsetUuidString =
 const String wifiCharConnectReqUUIDString =
     'BAF5AA63-F6F0-BFEC-43B6-8F6232654386';
 
-const String wifiConnectionStartUuidString =
+const String wifiOnBleConnectionUUIDString =
     'BAF5AA67-F6F0-BFEC-43B6-8F6232654386';
 
 const String buttonFunctionServiceUuidString =

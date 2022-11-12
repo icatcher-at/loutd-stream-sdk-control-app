@@ -169,7 +169,6 @@ class _SUDeviceListPageState extends State<SUDeviceListPage> {
 
   @override
   void dispose() {
-    super.dispose();
     _streamSubscription.cancel();
     SystemChrome.setPreferredOrientations(<DeviceOrientation>[
       DeviceOrientation.landscapeRight,
@@ -186,6 +185,7 @@ class _SUDeviceListPageState extends State<SUDeviceListPage> {
     if (stream_amp) {
       _bleAmpDeviceProvider.stopScanning();
     }
+    super.dispose();
   }
 
   Widget cardMDnsLayout(Device device) {
@@ -295,7 +295,7 @@ class _SUDeviceListPageState extends State<SUDeviceListPage> {
             color: SUAppStyle.streamUnlimitedGreen()
         ),
         title: Text(
-            device.name,
+            device.name == '' ? bleNamePlaceholder : device.name,
             style: Theme.of(context).textTheme.headline3
         ),
       ),

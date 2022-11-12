@@ -26,6 +26,7 @@ class BleServiceHandler {
   BleServiceHandler(this._bleDevice) {
     _connCheckCount = 0;
     // If this object is generated, the app is connected to the device
+    _writeWifiBleConnection = null;
   }
 
   final BluetoothDevice _bleDevice;
@@ -40,7 +41,7 @@ class BleServiceHandler {
   late BluetoothCharacteristic? _readPubKey;
   late BluetoothCharacteristic? _writeOffset;
   late BluetoothCharacteristic? _writeWifiConnection;
-  BluetoothCharacteristic? _writeConnectionStart;
+  BluetoothCharacteristic? _writeWifiBleConnection;
 
   Function()? _onWifiConnected;
 
@@ -63,11 +64,11 @@ class BleServiceHandler {
                 _readWifiList = characteristic;
                 break;
               }
+
             case wifiCharPublicKeyUuidString:
-              {
-                _readPubKey = characteristic;
-                break;
-              }
+              _readPubKey = characteristic;
+              break;
+
             case wifiCharConnectStatusUUIDString:
               {
                 developer.log(
@@ -78,18 +79,17 @@ class BleServiceHandler {
               }
 
             case wifiCharReadOffsetUuidString:
-              {
-                _writeOffset = characteristic;
-                break;
-              }
-            case wifiConnectionStartUuidString:
-              {
-                _writeConnectionStart = characteristic;
-                break;
-              }
+              _writeOffset = characteristic;
+              break;
+
             case wifiCharConnectReqUUIDString:
               {
                 _writeWifiConnection = characteristic;
+                break;
+              }
+            case wifiOnBleConnectionUUIDString:
+              {
+                _writeWifiBleConnection = characteristic;
                 break;
               }
             default:
@@ -195,7 +195,7 @@ class BleServiceHandler {
             EasyLoading.show(
                 status: translate('load.loading'),
                 maskType: EasyLoadingMaskType.black);
-          if (_connCheckCount > 80) {
+          if (_connCheckCount > 160) {
             _setSetupState(BleSetupState.waitingUserInput);
             return;
           }
@@ -331,16 +331,14 @@ class BleServiceHandler {
       await _bleDevice.connect(autoConnect: false).timeout(const Duration(seconds: 30));
       await _setSetupState(BleSetupState.connected);
       await _processServices();
-      await _setSetupState(BleSetupState.fetchPubKey);
-      if (_writeConnectionStart != null) {
-        _writeConnectionStart!.write(convert.utf8.encode('connected'));
+      if (_writeWifiBleConnection != null) {
+        await _writeWifiBleConnection!.write(convert.utf8.encode('connected'));
       }
+      await _setSetupState(BleSetupState.fetchPubKey);
     } catch (timeOutException) {
       EasyLoading.dismiss();
       if (Platform.isAndroid) {
         SUActionDialog.showActionDialog(context, translate('softap.title'), translate('softap.description'), connectToSoftAp, actionButtonText: 'softap.connect');
-      } else {
-        Navigator.of(context).pop();
       }
     }
   }

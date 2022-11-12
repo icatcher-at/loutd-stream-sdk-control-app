@@ -1,5 +1,6 @@
 //Parameter of JavascriptChannel, which is used to pass data from webview to flutter app
 
+const String bleNamePlaceholder = 'Stream Device';
 const String bleServiceType = '_sueS800Device._tcp';
 const String multiRoomServiceType = '_sueGrouping._tcp';
 const String DefaultModelName = "DefaultModel";

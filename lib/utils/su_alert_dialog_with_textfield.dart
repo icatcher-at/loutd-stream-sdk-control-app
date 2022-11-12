@@ -21,11 +21,14 @@ class AlertDialogWithTextField extends StatefulWidget {
 
 class _AlertDialogWithTextFieldState extends State<AlertDialogWithTextField> {
   late TextEditingController _textEditingController;
+  late bool _isObscure;
   String? passWord;
+
   @override
   void initState() {
     super.initState();
     _textEditingController = TextEditingController();
+    _isObscure = true;
   }
 
   @override
@@ -40,11 +43,19 @@ class _AlertDialogWithTextFieldState extends State<AlertDialogWithTextField> {
             : Text(translate('')),
         backgroundColor: SUAppStyle.streamUnlimitedGrey3(),
         content: widget.passwordNeeded ? TextField(
-            obscureText: true,
+            obscureText: _isObscure,
             controller: _textEditingController,
             textInputAction: TextInputAction.go,
             keyboardType: TextInputType.visiblePassword,
             decoration: InputDecoration(
+                suffixIcon: IconButton(
+                    icon: Icon(
+                        _isObscure ? Icons.visibility : Icons.visibility_off, color: SUAppStyle.streamUnlimitedGreen()),
+                    onPressed: () {
+                      setState(() {
+                        _isObscure = !_isObscure;
+                      });
+                    }),
                 enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: SUAppStyle.streamUnlimitedGreen()),
                 ),

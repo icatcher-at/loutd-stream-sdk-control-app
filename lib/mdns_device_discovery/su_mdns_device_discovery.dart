@@ -50,19 +50,19 @@ class MdnsDeviceDiscovery {
     // If you want to listen to the discovery :
     _discovery.eventStream?.listen((BonsoirDiscoveryEvent event) async {
       if (event.type ==
-          BonsoirDiscoveryEventType.DISCOVERY_SERVICE_RESOLVED) {
+          BonsoirDiscoveryEventType.discoveryServiceResolved) {
         if (enableMdnsLog)
           developer.log('Service found : ${event.service?.toJson()}',
             name: runtimeType.toString());
         _checkDevice(event);
       } else if (event.type ==
-          BonsoirDiscoveryEventType.DISCOVERY_SERVICE_LOST) {
+          BonsoirDiscoveryEventType.discoveryServiceLost) {
         if (enableMdnsLog)
           developer.log('Service lost : ${event.service?.toJson()}',
             name: runtimeType.toString());
         _removeDevice(_createDeviceFromEvent(event));
       } else if (event.type ==
-          BonsoirDiscoveryEventType.DISCOVERY_SERVICE_RESOLVE_FAILED) {
+          BonsoirDiscoveryEventType.discoveryServiceResolveFailed) {
         if (enableMdnsLog)
           developer.log('Service cannot resolved : ${event.service?.toJson()}',
             name: runtimeType.toString());

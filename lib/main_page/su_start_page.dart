@@ -22,7 +22,7 @@ class SUStartPage extends StatelessWidget {
       ],
       supportedLocales: localizationDelegate.supportedLocales,
       locale: localizationDelegate.currentLocale,
-      title: 'StreamSDKControlApp',
+      title: 'Flutter Demo',
       theme: SUAppStyle().theme,
       darkTheme: SUAppStyle().darkTheme,
       // home: const SUDeviceListPage(title: 'StreamSDKControlApp'),
