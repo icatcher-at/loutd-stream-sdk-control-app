@@ -8,6 +8,7 @@ import 'package:stream_webview_app/main_page/su_appbar.dart';
 import 'package:stream_webview_app/style/su_app_style.dart';
 import 'package:stream_webview_app/utils/su_global_config.dart';
 import 'package:stream_webview_app/utils/su_url_constants.dart';
+import 'package:stream_webview_app/websocket/su_websocket_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -26,7 +27,7 @@ class WebViewContainerCover extends StatefulWidget {
   WebViewContainerCoverState createState() => WebViewContainerCoverState();
 }
 
-class WebViewContainerCoverState extends State<WebViewContainerCover> {
+class WebViewContainerCoverState extends State<WebViewContainerCover> with WidgetsBindingObserver {
   late DeepLinkBloc bloc;
   late StreamSubscription<String> _blocStateSub;
 
@@ -38,8 +39,27 @@ class WebViewContainerCoverState extends State<WebViewContainerCover> {
   final UniqueKey _key = UniqueKey();
 
   @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    switch (state) {
+      case AppLifecycleState.resumed:
+        WebSocketHandler().checkSpotify();
+        break;
+      case AppLifecycleState.inactive:
+        print('app in inactive');
+        break;
+      case AppLifecycleState.paused:
+        print('app in paused');
+        break;
+      case AppLifecycleState.detached:
+        print('app in detached');
+        break;
+    }
+  }
+
+  @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance!.addObserver(this);
     _url = Uri.http('${widget._ip}:${widget._port}', '/webclient/', <String, String>{'isMobileApp' : 'true'}).toString();
 
     bloc = DeepLinkBloc();
